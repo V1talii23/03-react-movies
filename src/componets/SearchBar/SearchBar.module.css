@@ -35,11 +35,13 @@
 }
 
 .input {
+  color: white;
   padding: 10px 12px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid #414141;
   border-radius: 4px;
   width: 240px;
+  background-color: #414141;
 }
 
 .button {
