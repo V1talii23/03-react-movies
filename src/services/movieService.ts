@@ -6,15 +6,15 @@ interface MovieHttpResponse {
   results: Movie[];
 }
 
-const moviesInstance = axios.create({
-  baseURL: 'https://api.themoviedb.org/3/search',
+const axiosInstance = axios.create({
+  baseURL: 'https://api.themoviedb.org/3',
   headers: {
     Authorization: `Bearer ${API_TOKEN}`,
   },
 });
 
 export const fetchMovie = async (movie: string): Promise<Movie[]> => {
-  const res = await moviesInstance.get<MovieHttpResponse>('/movie', {
+  const res = await axiosInstance.get<MovieHttpResponse>('/search/movie', {
     params: { query: movie },
   });
 
